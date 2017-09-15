@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/email', function(){
+    return new App\Mail\Welcome();
+});
+
+
+Route::view('/form', 'formulario');
